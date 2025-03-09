@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple tool to bookmark your favorite websites.">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookmarker</title>
+</head>
+<body>
+    <div class="container pt-2">
+        <h1 class="pb-2 text-muted">Bookmarker</h1>
+        <hr>
+        <div class="form-project my-5 py-4 text-center">
+            <h2>Bookmark your favorite sites</h2>
+            <form id="bookmarkForm">
+                <div class="form-group mx-5">
+                    <label for="name" class="text-center fw-bold">Site Name</label>
+                    <input class="form-control" type="text" id="name" placeholder="Bookmarker" required>
+                </div>
+                <div class="form-group mx-5">
+                    <label for="url" class="text-center fw-bold">Site URL</label>
+                    <input class="form-control" type="text" id="url" placeholder="Website URL" required>
+                </div>
+                <div class="pt-5">
+                    <button id="addBtn" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <input onkeyup="search(this.value)" id="searchInput" class="my-3 form-control" placeholder="Search by bookmark name" type="text">
+
+        <div class="output">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Site Name</th>
+                        <th>URL</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody">
+                    <tr>
+                        <td colspan="3" class="text-center">No bookmarks added yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+        <footer>
+            <h6 class="text-muted">© 2025 Bookmarker</h6>
+        </footer>
+    </div>
+
+    <script src="index.js/bootstrap.bundle.min.js"></script>
+    <script src="index.js/main.js"></script>
+</body>
+</html>
